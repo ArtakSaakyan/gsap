@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tween</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <main class="main">
+    <section class="framework" id="framework">
+      <div class="container">
+        <div class="framework__inner">
+          <div class="framework__info">
+            <h1 class="framework__title" id="title">Astro</h1>
+            <p class="framework__description" id="description">Создавайте более быстрые веб-сайты</p>
+            <ul class="framework__features" id="features">
+              <li>✔ Cборщик статических сайтов 🚀</li>
+              <li>✔ Принесите свой собственный фреймворк 💻</li>
+              <li>✔ Отправляйте меньше JavaScript 📤</li>
+            </ul>
+            <button class="framework__btn" id="button">Посмотреть</button>
+          </div>
+          <div class="framework__img">
+            <div class="framework__img-item framework__img-1">
+              <img src="svg/react.svg" alt="">
+            </div>
+            <div class="framework__img-item framework__img-2">
+              <img src="svg/vue.svg" alt="">
+            </div>
+            <div class="framework__img-item framework__img-3">
+              <img src="svg/typescript.svg" alt="">
+            </div>
+            <div class="framework__img-item framework__img-4">
+              <img src="svg/sass.svg" alt="">
+            </div>
+            <div class="framework__img-item framework__img-5">
+              <img src="svg/tailwind.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script>
+    var tl = gsap.timeline()
+    tl.from("#framework", { opacity: 0, duration: .1 })
+      .from("#title", { x: 80, opacity: 0 })
+      .from("#description", { y: 30, opacity: 0 })
+      .from("#features > li", {
+        duration: .5,
+        x: -80,
+        opacity: 0,
+        stagger: .5,
+      })
+      .from("#button", {
+        transformOrigin: "50% 50%",
+        scale: 0,
+        opacity: 0,
+        stagger: .5,
+      })
+      .from(".framework__img > .framework__img-item", {
+        transformOrigin: "50% 50%",
+        scale: 0,
+        opacity: 0,
+        stagger: .2,
+      });
+  </script>
+
+</body>
+</html>
