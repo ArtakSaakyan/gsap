@@ -19,13 +19,11 @@ body {
   min-width: 100%;
 }
 
-.main {
-
-}
-
 .framework {
   position: relative;
-  top: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .container {
@@ -36,7 +34,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
 }
 
 .framework__info {
@@ -53,6 +50,8 @@ body {
   margin: 0;
   margin-bottom: 30px;
   font-size: 25px;
+  line-height: 25px;
+  height: 25px;
 }
 
 .framework__features {
@@ -73,7 +72,6 @@ body {
   border-radius: 15px;
   font-weight: 700;
   color:#7E22CE;
-  // transition: .3s;
   cursor: pointer;
 
   &:hover {
@@ -116,4 +114,36 @@ body {
 
 .framework__img-5 {
   text-align: right;
+}
+
+
+
+
+
+
+.header-section {
+  margin: 100px auto 0;
+}
+
+svg {
+  max-width: 600px;
+  overflow: visible;
+  margin-top: 60vh;
+}
+
+.ball {
+  fill: white;
+  visibility: hidden;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+text {
+  fill: white;
+  font-size: 15px;
+  font-family: "Signika Negative", sans-serif; 
+  visibility: hidden;
 }

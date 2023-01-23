@@ -22,7 +22,13 @@ body {
 
 .framework {
   position: relative;
-  top: 50%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .framework__inner {
@@ -35,7 +41,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
 }
 
 .framework__info {
@@ -52,6 +57,8 @@ body {
   margin: 0;
   margin-bottom: 30px;
   font-size: 25px;
+  line-height: 25px;
+  height: 25px;
 }
 
 .framework__features {
@@ -118,4 +125,32 @@ body {
 
 .framework__img-5 {
   text-align: right;
+}
+
+.header-section {
+  margin: 100px auto 0;
+}
+
+svg {
+  max-width: 600px;
+  overflow: visible;
+  margin-top: 60vh;
+}
+
+.ball {
+  fill: white;
+  visibility: hidden;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+text {
+  fill: white;
+  font-size: 15px;
+  font-family: "Signika Negative", sans-serif;
+  visibility: hidden;
 }/*# sourceMappingURL=main.css.map */
